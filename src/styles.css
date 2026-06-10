@@ -44,8 +44,7 @@ body {
 }
 
 main > section,
-main > footer,
-main > header {
+main > footer {
   position: relative;
   z-index: 1;
 }
