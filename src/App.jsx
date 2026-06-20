@@ -336,22 +336,24 @@ function Header({ theme, onThemeChange }) {
 
   return (
     <header className="fixed inset-x-0 top-5 z-50 flex flex-col items-center px-4">
-      <nav className="flex h-12 max-w-[92vw] items-center gap-1 rounded-full border border-neutral-200/80 bg-white/78 px-2 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/72">
-        <a href="#about" className="px-3 font-display text-2xl font-black leading-none tracking-normal">
+      <nav className="navbar-shell hidden h-14 items-center gap-1 px-3 sm:flex">
+        <a
+          href="#about"
+          aria-label="Go to About section"
+          className="navbar-brand-text rounded-full px-2 py-2 font-display text-2xl font-black leading-none tracking-normal"
+        >
           Zayaad
         </a>
-        <div className="hidden items-center gap-1 sm:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-3 py-2 text-sm font-semibold text-neutral-600 transition hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-300 dark:hover:bg-white/10 dark:hover:text-white"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-        <div className="ml-1 flex rounded-full bg-neutral-100 p-1 dark:bg-white/10">
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="navbar-link rounded-full px-3 py-2 text-sm font-semibold transition"
+          >
+            {item.label}
+          </a>
+        ))}
+        <div className="navbar-theme-group ml-1 flex rounded-full p-1">
           {themeOptions.map(({ value, label, icon: Icon }) => (
             <button
               key={value}
@@ -359,39 +361,65 @@ function Header({ theme, onThemeChange }) {
               aria-label={label}
               title={label}
               onClick={() => onThemeChange(value)}
-              className={`flex h-8 w-8 items-center justify-center rounded-full transition ${
-                theme === value
-                  ? 'bg-white text-neutral-950 shadow-sm dark:bg-neutral-950 dark:text-white'
-                  : 'text-neutral-500 hover:text-neutral-950 dark:text-neutral-400 dark:hover:text-white'
+              className={`navbar-theme-button flex h-8 w-8 items-center justify-center rounded-full transition ${
+                theme === value ? 'is-active' : ''
               }`}
             >
               <Icon size={15} />
             </button>
           ))}
         </div>
-        <button
-          type="button"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          title={isMenuOpen ? 'Close menu' : 'Open menu'}
-          onClick={() => setIsMenuOpen((current) => !current)}
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-100 text-neutral-700 sm:hidden dark:bg-white/10 dark:text-neutral-200"
+      </nav>
+
+      <nav className="navbar-shell relative flex h-14 w-[min(92vw,24rem)] items-center justify-between px-3 sm:hidden">
+        <a
+          href="#about"
+          aria-label="Go to About section"
+          className="navbar-brand-text px-2 font-display text-2xl font-black leading-none tracking-normal"
         >
-          {isMenuOpen ? <X size={16} /> : <Menu size={16} />}
-        </button>
+          Zayaad
+        </a>
+        <div className="flex items-center gap-2">
+          <div className="navbar-theme-group flex rounded-full p-1">
+            {themeOptions.map(({ value, label, icon: Icon }) => (
+              <button
+                key={value}
+                type="button"
+                aria-label={label}
+                title={label}
+                onClick={() => onThemeChange(value)}
+                className={`navbar-theme-button flex h-8 w-8 items-center justify-center rounded-full transition ${
+                  theme === value ? 'is-active' : ''
+                }`}
+              >
+                <Icon size={15} />
+              </button>
+            ))}
+          </div>
+          <button
+            type="button"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            title={isMenuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setIsMenuOpen((current) => !current)}
+            className="navbar-menu-button flex h-9 w-9 items-center justify-center rounded-full"
+          >
+            {isMenuOpen ? <X size={16} /> : <Menu size={16} />}
+          </button>
+        </div>
       </nav>
       {isMenuOpen ? (
         <div
           id="mobile-navigation"
-          className="mt-3 grid w-[min(92vw,22rem)] gap-1 rounded-[1.25rem] border border-neutral-200/80 bg-white/92 p-2 shadow-xl backdrop-blur-xl sm:hidden dark:border-white/10 dark:bg-neutral-900/92"
+          className="navbar-mobile mt-3 grid w-[min(92vw,22rem)] gap-1 rounded-[1.25rem] p-2 sm:hidden"
         >
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="rounded-full px-4 py-3 text-sm font800 text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-white/10 dark:hover:text-white"
+              className="navbar-mobile-link rounded-full px-4 py-3 text-sm font800 transition"
             >
               {item.label}
             </a>
@@ -399,7 +427,7 @@ function Header({ theme, onThemeChange }) {
           <a
             href="#contact"
             onClick={() => setIsMenuOpen(false)}
-            className="rounded-full px-4 py-3 text-sm font800 text-neutral-700 transition hover:bg-neutral-100 hover:text-neutral-950 dark:text-neutral-200 dark:hover:bg-white/10 dark:hover:text-white"
+            className="navbar-mobile-link rounded-full px-4 py-3 text-sm font800 transition"
           >
             Contact
           </a>
