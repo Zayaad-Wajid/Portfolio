@@ -74,36 +74,36 @@ const projects = [
   {
     title: 'Autonomous Cyber Defense System',
     summary:
-      'AI-powered cybersecurity platform for automated threat detection, incident response, SOAR workflows, SOC monitoring, and real-time mitigation.',
-    tech: ['Python', 'FastAPI', 'scikit-learn', 'GitHub Actions'],
+      'Final year project focused on an AI-driven autonomous cyber defense system for threat detection, incident response, and security automation workflows.',
+    tech: ['Python', 'Threat Detection', 'SOAR', 'Automation'],
     status: 'Ready for Vercel link',
   },
   {
     title: 'AI Research Orchestrator',
     summary:
-      'Multi-agent research system for complex query decomposition, automated web search, research generation, and code execution.',
-    tech: ['OpenAI Agents SDK', 'Gemini', 'Python'],
+      'Full-stack research workspace for document-grounded analysis with PDF ingestion, semantic retrieval, Gemini-powered synthesis, Tavily web search, and structured report generation.',
+    tech: ['React', 'FastAPI', 'ChromaDB', 'LangGraph', 'Gemini'],
     status: 'Ready for Vercel link',
   },
   {
     title: 'Quizify',
     summary:
-      'Full-stack quiz platform with AI quiz generation, JWT authentication, RESTful APIs, and a responsive React experience.',
-    tech: ['React', 'FastAPI', 'Gemini API', 'JWT'],
+      'Coding-focused learning platform with AI quiz generation, structured study notes, progress tracking, leaderboard flows, and a programming assistant across a React and FastAPI stack.',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'Gemini API', 'JWT'],
     status: 'Ready for Vercel link',
   },
   {
     title: 'NLP Resume Screening System',
     summary:
-      'Resume matching tool using sentence-transformer embeddings, cosine similarity, entity extraction, and a Streamlit interface.',
-    tech: ['Sentence-Transformers', 'spaCy', 'Streamlit'],
+      'Resume screening and ranking system that matches resumes to job descriptions using sentence-transformer embeddings, cosine similarity, entity extraction, and a Streamlit front end.',
+    tech: ['Sentence-Transformers', 'spaCy', 'Streamlit', 'Cosine Similarity'],
     status: 'Ready for Vercel link',
   },
   {
     title: 'Transformer QA Evaluation App',
     summary:
-      'Question-answering system comparing BERT, DistilBERT, and ALBERT with EM/F1 evaluation and interactive deployment.',
-    tech: ['BERT', 'DistilBERT', 'ALBERT', 'Streamlit'],
+      'Extractive question-answering app built on SQuAD v1.1 with fine-tuned BERT, DistilBERT, and ALBERT models, plus Exact Match and F1 evaluation in an interactive Streamlit interface.',
+    tech: ['BERT', 'DistilBERT', 'ALBERT', 'Streamlit', 'SQuAD'],
     status: 'Ready for Vercel link',
   },
 ];
