@@ -475,11 +475,6 @@ function Projects() {
         <div className="mt-8 divide-y divide-neutral-200 dark:divide-white/10">
           {projects.map((project) => (
             <article key={project.title} className="project-row">
-              <div className="flex flex-wrap items-center gap-2 text-xs font700 text-neutral-500 dark:text-neutral-400">
-                <span>{project.status}</span>
-                <span className="h-1 w-1 rounded-full bg-neutral-300 dark:bg-neutral-600" />
-                <span>{project.tech.length} Tech</span>
-              </div>
               <div className="mt-4 flex items-start justify-between gap-5">
                 <div>
                   <h3 className="text-xl font800 leading-tight">{project.title}</h3>
