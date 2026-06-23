@@ -22,7 +22,7 @@ import profileImage from './assets/zayaad-profile.jpg';
 
 const profile = {
   name: 'Zayaad Wajid',
-  title: 'AI Developer and Full Stack Builder',
+  title: 'Full Stack Developer and AI Engineer',
   location: 'Based in Pakistan',
   email: 'zayaadw@gmail.com',
   github: 'https://github.com/Zayaad-Wajid',
@@ -44,29 +44,34 @@ const themeOptions = [
 
 const services = [
   {
+    title: 'Full Stack Web Apps',
+    text: 'React frontends connected to FastAPI backends, JWT authentication, REST APIs, dashboards, and deployment-ready architecture.',
+    icon: Layers3,
+  },
+  {
     title: 'AI and ML Applications',
     text: 'Classification systems, NLP apps, model evaluation flows, and practical AI features built with Python and modern ML tools.',
     icon: BrainCircuit,
   },
   {
-    title: 'Full Stack Web Apps',
-    text: 'React interfaces connected to FastAPI backends, JWT authentication, REST APIs, dashboards, and deployment-ready structure.',
-    icon: Layers3,
+    title: 'Backend & API Engineering',
+    text: 'Database design with PostgreSQL and MongoDB, SQLAlchemy ORM, RESTful API design, authentication, and scalable backend architecture.',
+    icon: PenTool,
   },
   {
     title: 'Agentic AI Systems',
-    text: 'Multi-agent workflows with OpenAI Agents SDK, CrewAI-style orchestration, Gemini integrations, and automated research flows.',
+    text: 'Multi-agent workflows with OpenAI Agents SDK, CrewAI-style orchestration, Gemini integrations, automated research flows, and security-aware automation like SOAR-style incident response.',
     icon: Bot,
+  },
+  {
+    title: 'Frontend Development',
+    text: 'React, responsive UI/UX, Tailwind CSS, state management, and clean, production-ready interfaces.',
+    icon: Code2,
   },
   {
     title: 'NLP Solutions',
     text: 'Sentiment analysis, NER, question answering, resume screening, embeddings, and transformer-based language systems.',
     icon: ServerCog,
-  },
-  {
-    title: 'Security Automation',
-    text: 'AI-assisted threat detection, SOAR workflow concepts, SOC monitoring dashboards, and security-aware backend systems.',
-    icon: PenTool,
   },
 ];
 
@@ -448,8 +453,9 @@ function Hero() {
         <span className="text-neutral-500 dark:text-neutral-400">{profile.title}</span>
       </h1>
       <p className="mt-8 max-w-3xl text-base font-medium leading-8 text-neutral-600 sm:text-lg dark:text-neutral-300">
-        I build AI-driven applications across machine learning, NLP, agentic workflows, FastAPI
-        backends, and React frontends. I like practical systems that turn models into useful products.
+        I build full-stack web applications with React and FastAPI, and AI-driven features across
+        machine learning, NLP, and agentic workflows. I like shipping complete, end-to-end
+        products from the database and API layer up through AI models that actually work.
       </p>
       <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
         <a className="button-pill" href={`mailto:${profile.email}`}>
@@ -478,7 +484,7 @@ function Services() {
     <section id="services" className="section-shell">
       <SectionHeading
         title="What I can offer for Your Organization"
-        text="AI, NLP, agentic systems, full stack development, and security-aware automation shaped by hands-on project work."
+        text="Full stack web development and AI/ML engineering from React and FastAPI products to NLP, agentic systems, and security-aware automation shaped by hands-on project work."
       />
       <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {services.map(({ title, text, icon: Icon }) => (
