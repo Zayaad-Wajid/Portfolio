@@ -98,17 +98,17 @@ const projects = [
     status: 'Ready for Vercel link',
   },
   {
+    title: 'TaskFlow AI',
+    summary:
+      'ClickUp-inspired task management platform with Kanban, list and calendar views, JWT authentication, PostgreSQL-backed persistence, and an AI assistant for natural language task creation, planning, and productivity insights.',
+    tech: ['React', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Gemini'],
+    status: 'Ready for Vercel link',
+  },
+  {
     title: 'NLP Resume Screening System',
     summary:
       'Resume screening and ranking system that matches resumes to job descriptions using sentence-transformer embeddings, cosine similarity, entity extraction, and a Streamlit front end.',
     tech: ['Sentence-Transformers', 'spaCy', 'Streamlit', 'Cosine Similarity'],
-    status: 'Ready for Vercel link',
-  },
-  {
-    title: 'Transformer QA Evaluation App',
-    summary:
-      'Extractive question-answering app built on SQuAD v1.1 with fine-tuned BERT, DistilBERT, and ALBERT models, plus Exact Match and F1 evaluation in an interactive Streamlit interface.',
-    tech: ['BERT', 'DistilBERT', 'ALBERT', 'Streamlit', 'SQuAD'],
     status: 'Ready for Vercel link',
   },
 ];
