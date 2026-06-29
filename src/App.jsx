@@ -162,6 +162,15 @@ const tools = [
     text: 'Core browser language for interactive frontend behavior and modern web application logic.',
   },
   {
+    name: 'TypeScript',
+    fallback: 'TS',
+    logos: [
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+      brandLogo('typescript', '3178C6'),
+    ],
+    text: 'Typed JavaScript for safer frontend architecture, better tooling, and scalable application development.',
+  },
+  {
     name: 'CrewAI',
     fallback: 'CR',
     logos: [
@@ -217,6 +226,15 @@ const tools = [
       brandLogo('mysql', '4479A1'),
     ],
     text: 'Relational database for structured app data, queries, and backend persistence.',
+  },
+  {
+    name: 'PostgreSQL',
+    fallback: 'PG',
+    logos: [
+      'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+      brandLogo('postgresql', '4169E1'),
+    ],
+    text: 'Production-ready relational database for authentication, structured data, migrations, and scalable backend systems.',
   },
   {
     name: 'MongoDB',
